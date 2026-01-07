@@ -1,0 +1,32 @@
+{
+  "name": "@authord/runtime-node",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "@authord/render-core": "^0.1.0"
+  },
+  "devDependencies": {
+    "@authord/render-core": "git+https://github.com/nivoragit/authord-render-core.git#main",
+    "@types/node": "^20.17.14",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
